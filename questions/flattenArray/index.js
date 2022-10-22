@@ -15,10 +15,11 @@
   const result = []
 
   const flattenHelper = (nums) => {
-    for (elem of nums){
-      if (Array.isArray(elem)){
+    for (elem of nums) {
+      if (Array.isArray(elem)) {
         flattenHelper(elem)
-      }else{
+      }
+      else {
         result.push(elem)
       }
     }
@@ -27,8 +28,18 @@
   flattenHelper(nums)
 
   return result
-
-
  };
 
 module.exports = flatten; 
+
+// recursion
+// function flatten(nums) {
+//   for (elem of nums) {
+//     if (elem is an array) {
+//       flatten(elem)
+//     }
+//     else {
+//       results.push(elem)
+//     }
+//   }
+// }
